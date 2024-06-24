@@ -13,7 +13,7 @@ class Word:
 
     def includes_letter(self, letter: Letter):
         for current_letter in self.letters:
-            if letter.value == current_letter.value:
+            if letter == current_letter.value:
                 return True
 
         return False
