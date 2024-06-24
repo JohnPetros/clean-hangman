@@ -4,6 +4,7 @@ from .word import Word
 from .attempts_count import AtemptsCount
 from .blanks_group import BlanksGroup
 from .category import Category
+from .letter import Letter
 from ..constants import INITIAL_ATTEMPTS_COUNT
 
 
@@ -12,6 +13,7 @@ class Game:
     correct_word: Word
     blanks_group: BlanksGroup
     attempts_count: AtemptsCount
+    used_letters: list[str]
 
     @staticmethod
     def create(category_value: str):
@@ -25,18 +27,53 @@ class Game:
             correct_word=correct_word,
             blanks_group=blanks_group,
             attempts_count=attempts_count,
+            used_letters=[],
         )
 
     def input_letter(self, user_letter: str):
+        if user_letter in ["exit", "reset"]:
+            return self.__reset()
+
+        letter = Letter(user_letter)
+
+        used_letters = self.used_letters
+
+        if user_letter in used_letters:
+            raise ValueError(f"Letter {user_letter.upper()} has already been used")
+
+        used_letters.append(letter.value)
+
         if self.correct_word.includes_letter(user_letter):
-            return self.clone(
-                {"blanks_group": self.blanks_group.reveal_letter(user_letter)}
-            )
+            return self.__reveal_letter(user_letter, used_letters)
         else:
-            return self.clone({"attempts_count": self.attempts_count.decrement()})
+            return self.__decrement_attempts_count(used_letters)
 
     def check_lose(self):
-        return self.attempts.value == 0
+        return self.attempts_count.value == 0
 
     def check_win(self):
         return self.correct_word.value == self.blanks_group.formed_word
+
+    def __reveal_letter(self, user_letter: str, used_letters: list[str]):
+        return Game(
+            correct_word=self.correct_word,
+            attempts_count=self.attempts_count,
+            blanks_group=self.blanks_group.reveal_letter(user_letter),
+            used_letters=used_letters,
+        )
+
+    def __decrement_attempts_count(self, used_letters: list[str]):
+        return Game(
+            correct_word=self.correct_word,
+            attempts_count=self.attempts_count.decrement(),
+            blanks_group=self.blanks_group,
+            used_letters=used_letters,
+        )
+
+    def __reset(self):
+        return Game(
+            correct_word=self.correct_word,
+            blanks_group=self.blanks_group,
+            attempts_count=AtemptsCount(0),
+            used_letters=[],
+        )
