@@ -12,8 +12,8 @@ def categories_table_view():
         "Pick one of the following categories:", expand=True, leading=1
     )
 
-    # with console.status("Loading...", spinner="material"):
-    #     sleep(2)
+    with console.status("Loading...", spinner="material"):
+        sleep(2)
 
     categories_table.add_row(
         f"(P) Programming {CATEGORIES_EMOJIS.programming}\t  (A) Animals {CATEGORIES_EMOJIS.animals}"
