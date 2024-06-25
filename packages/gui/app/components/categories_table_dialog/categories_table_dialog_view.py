@@ -10,7 +10,7 @@ from flet import (
 
 from gui.app.types import Callback
 
-from .category_button_click.category_button_click_view import category_button_click_view
+from .category_button.category_button_view import category_button_view
 from .categories_table_dialog_controller import CategoriesTableDialogController
 
 
@@ -32,12 +32,12 @@ def categories_table_dialog_view(on_choose: Callback):
     rows = [
         Row(
             [
-                category_button_click_view(
+                category_button_view(
                     "Programming",
                     icons.COMPUTER,
                     categories_table_dialog_controller.handle_category_button_click,
                 ),
-                category_button_click_view(
+                category_button_view(
                     "Animals",
                     icons.PETS,
                     categories_table_dialog_controller.handle_category_button_click,
@@ -46,12 +46,12 @@ def categories_table_dialog_view(on_choose: Callback):
         ),
         Row(
             [
-                category_button_click_view(
+                category_button_view(
                     "Countries",
                     icons.PUBLIC,
                     categories_table_dialog_controller.handle_category_button_click,
                 ),
-                category_button_click_view(
+                category_button_view(
                     "Fruits",
                     icons.RICE_BOWL,
                     categories_table_dialog_controller.handle_category_button_click,
@@ -60,12 +60,12 @@ def categories_table_dialog_view(on_choose: Callback):
         ),
         Row(
             [
-                category_button_click_view(
+                category_button_view(
                     "Sports",
                     icons.SPORTS_SOCCER,
                     categories_table_dialog_controller.handle_category_button_click,
                 ),
-                category_button_click_view(
+                category_button_view(
                     "Objects",
                     icons.CHAIR,
                     categories_table_dialog_controller.handle_category_button_click,
