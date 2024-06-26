@@ -9,7 +9,7 @@ from .home_controller import HomeController
 
 
 def home_view(ui: UI):
-    ui.title = "Hangman - A John Petros' Game"
+    ui.title = "Clean Hangman - A John Petros' Game"
     ui.bgcolor = "#34495E"
     ui.horizontal_alignment = CrossAxisAlignment.CENTER
     ui.window_height = 820
