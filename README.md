@@ -23,9 +23,9 @@
 
 **Hangman** is a classic game in which the player guesses a word of a certain category within a limited number of attempts.
 
-The base code itself follows the concepts of [Clean Architecture](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/) proposed by Unacle Bob in [his book](https://www.amazon.com.br/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164). Therefore, it conscerns to separate the core business logic (rules of the game) from any external factors like frameworks, libraries, environment, and UI. This separation consequently enhaces the maintainability, scalability and testability of the project in the long run.
+The base code itself follows the concepts of **[Clean Architecture](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/)** proposed by [Uncle Bob](http://cleancoder.com/products) in [his book](https://www.amazon.com.br/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164). Therefore, it conscerns to separate the core business logic (rules of the game) from any external factors like frameworks, libraries, environment, and UI. This separation consequently enhaces the maintainability, scalability and testability of the project in the long run.
 
-The project is divided into three packages: core, [CLI](https://www.w3schools.com/whatis/whatis_cli.asp) and [GUI](https://www.geeksforgeeks.org/what-is-graphical-user-interface/). So, this allows user to choose their preferred application for playing the game, whether by command-line interface or graphical interface.
+The project is divided into three packages: core, **[CLI](https://www.w3schools.com/whatis/whatis_cli.asp)** and **[GUI](https://www.geeksforgeeks.org/what-is-graphical-user-interface/)**. So, this allows user to choose their preferred application for playing the game, whether by command-line interface or graphical interface.
 
 ### ⏹️ Preview
 
