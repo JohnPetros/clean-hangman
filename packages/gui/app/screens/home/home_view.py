@@ -20,6 +20,8 @@ def home_view(ui: UI):
         on_choose=home_controller.handle_categories_dialog_choose
     )
 
+    ui.on_keyboard_event = home_controller.handle_key_press
+
     ui.overlay.append(categories_table_dialog)
     categories_table_dialog.open = True
 

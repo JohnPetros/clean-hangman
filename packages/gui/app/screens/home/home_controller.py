@@ -1,4 +1,4 @@
-from flet import ControlEvent, Banner
+from flet import ControlEvent, KeyboardEvent, Banner
 
 from gui.app.types import UI
 from gui.app.components import (
@@ -41,7 +41,22 @@ class HomeController:
 
     def handle_key_click(self, event: ControlEvent):
         letter = event.control.content.value
+        self.__input_letter(letter)
 
+    def handle_key_press(self, event: KeyboardEvent):
+        letter = event.key
+        print(letter)
+        self.__input_letter(letter)
+
+    def handle_reset_button_click(self, _):
+        self.__remove_previous_game_ui()
+        game_store.reset_game()
+        self.ui.update()
+
+    def handle_close_alert(self, banner: Banner):
+        self.ui.close(banner)
+
+    def __input_letter(self, letter: str):
         try:
             game_store.input_letter(letter.lower())
         except ValueError as error:
@@ -53,14 +68,6 @@ class HomeController:
             self.__open_end_game_dialog(is_win=False)
         else:
             self.__update_game_ui()
-
-    def handle_reset_button_click(self, _):
-        self.__remove_previous_game_ui()
-        game_store.reset_game()
-        self.ui.update()
-
-    def handle_close_alert(self, banner: Banner):
-        self.ui.close(banner)
 
     def __open_end_game_dialog(self, is_win: bool):
         self.__remove_previous_game_ui()
