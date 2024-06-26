@@ -128,8 +128,6 @@ $ python3 packages/main.py start
 
 ```
 
-![alt text](image.png)
-
 ---
 
 ### 🖥️ Running the GUI application
