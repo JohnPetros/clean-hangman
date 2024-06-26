@@ -103,20 +103,20 @@ This project was developed using the technologies bellow:
 ```bash
 
 # Clone this repository
-$ git clone https://github.com/JohnPetros/clean-hangman.git
+git clone https://github.com/JohnPetros/clean-hangman.git
 
 # Access the project folder
-$ cd clean-hangman
+cd clean-hangman
 
 # Create the virtual enviroment
-$ python3 -m venv .venv
+python3 -m venv .venv
 
 # Activate the virtual enviroment
-$ source .venv/bin/activate # On Linux
-$ source .venv\Scripts\activate # On Windows
+source .venv/bin/activate # On Linux
+source .venv\Scripts\activate # On Windows
 
 # Install the dependencies
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 
 ```
 
@@ -124,7 +124,7 @@ $ pip install -r requirements.txt
 
 ```bash
 
-$ python3 packages/main.py start
+python3 packages/main.py start
 
 ```
 
@@ -134,7 +134,7 @@ $ python3 packages/main.py start
 
 ```bash
 
-$ python3 packages/main.py gui
+python3 packages/main.py gui
 
 ```
 
