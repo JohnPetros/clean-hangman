@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 from flet import AlertDialog
 
-from core.structs import Game
+from core.structs import Game, Category
 
 
 @dataclass
@@ -17,7 +17,7 @@ class GameStore:
 
     @category.setter
     def category(self, new_category: str):
-        self._game = Game.create(new_category)
+        self._game = Game.create(Category(new_category))
         self._category = new_category
 
     @property

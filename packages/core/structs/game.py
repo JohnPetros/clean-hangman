@@ -16,8 +16,7 @@ class Game:
     used_letters: list[str]
 
     @staticmethod
-    def create(category_value: str):
-        category = Category(category_value)
+    def create(category: Category):
         correct_word = category.random_word
 
         blanks_group = BlanksGroup.create(word_value=correct_word.value)
@@ -31,9 +30,6 @@ class Game:
         )
 
     def input_letter(self, user_letter: str):
-        if user_letter in ["exit", "reset"]:
-            return self.__reset()
-
         letter = Letter(user_letter)
 
         used_letters = self.used_letters
@@ -68,12 +64,4 @@ class Game:
             attempts_count=self.attempts_count.decrement(),
             blanks_group=self.blanks_group,
             used_letters=used_letters,
-        )
-
-    def __reset(self):
-        return Game(
-            correct_word=self.correct_word,
-            blanks_group=self.blanks_group,
-            attempts_count=AtemptsCount(0),
-            used_letters=[],
         )

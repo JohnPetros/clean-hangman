@@ -1,4 +1,4 @@
-from core.structs import Game
+from core.structs import Game, Category
 
 from cli.views import (
     title_view,
@@ -23,7 +23,8 @@ def start_command():
         categories_table_view()
         category_name, category_emoji = category_prompt_view()
 
-        game = Game.create(category_name)
+        category = Category(category_name)
+        game = Game.create(category)
 
         is_end_game = False
         is_win = False
