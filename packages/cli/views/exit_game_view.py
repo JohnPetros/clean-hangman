@@ -14,4 +14,4 @@ def exit_game_view():
         sleep(2)
 
     tprint("BY BY")
-    tprint("Made with love by Petros", space=2)
+    tprint("Made by Petros", space=2)
