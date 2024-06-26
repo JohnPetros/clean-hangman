@@ -109,7 +109,7 @@ $ git clone https://github.com/JohnPetros/clean-hangman.git
 $ cd clean-hangman
 
 # Create the virtual enviroment
-$ python3 venv .venv
+$ python3 -m venv .venv
 
 # Activate the virtual enviroment
 $ source .venv/bin/activate # On Linux
