@@ -1,12 +1,17 @@
 from time import sleep
 
+from art import tprint
+
 from rich.align import Align
 
 from cli.utils import console
 
 
 def exit_game_view():
-    with console.status(Align("Exiting...", "center"), spinner="monkey"):
+    console.print("\n")
+
+    with console.status(Align("Exiting...", "center", width=50), spinner="monkey"):
         sleep(2)
 
-    console.print("[yellow on blue]By by 👋🏻![/]")
+    tprint("BY BY")
+    tprint("Made with love by Petros", space=2)
