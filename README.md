@@ -64,7 +64,7 @@ The project is divided into three packages: core, **[CLI](https://www.w3schools.
 
 ## ⚙️ Archtecture
 
-## 📦 Packages
+### 📦 Packages
 
 - [Core](https://github.com/JohnPetros/clean-hangman/tree/main/packages/core) for protecting and encapsulating all the rules of the hangman game
 
@@ -72,7 +72,7 @@ The project is divided into three packages: core, **[CLI](https://www.w3schools.
 
 - [GUI](https://github.com/JohnPetros/clean-hangman/tree/main/packages/gui) throughout the entire GUI application codebase.
 
-## 🛠️ Technologies
+### 🛠️ Technologies
 
 This project was developed using the technologies bellow:
 
