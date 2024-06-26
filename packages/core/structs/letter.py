@@ -12,10 +12,10 @@ class Letter:
 
     def __validate_value(self):
         if not isinstance(self.value, str):
-            raise ValueError("Letter value should be a string")
+            raise ValueError("Letter value should be a text")
 
         if not self.value.isalpha():
-            raise ValueError("Letter value should be a text")
+            raise ValueError("Letter value should be alphabetic")
 
         if len(self.value) != 1:
             raise ValueError("Letter value's length should equal to one")
