@@ -39,7 +39,7 @@ The project is divided into three packages: core, **[CLI](https://www.w3schools.
    <tr>
     <td align="center" >
       <span>Graphical Interface<br/></span>
-      <img src="documentation/images/gui.png" height="600" width="1000" alt="GUI app preview" />
+      <img src="documentation/images/gui.png" height="500" width="1000" alt="GUI app preview" />
     </td>
   </tr>  
 </table>
@@ -127,7 +127,7 @@ $ python3 packages/main.py start
 
 ---
 
-### 📟 Running the GUI application
+### 🖥️ Running the GUI application
 
 ```bash
 
