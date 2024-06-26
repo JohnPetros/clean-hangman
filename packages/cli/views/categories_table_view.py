@@ -2,7 +2,7 @@ from time import sleep
 
 from rich.table import Table
 
-from core.constants import CATEGORIES_EMOJIS
+from cli.constants import CATEGORIES_EMOJIS
 
 from cli.utils import console
 
@@ -11,6 +11,8 @@ def categories_table_view():
     categories_table = Table(
         "Pick one of the following categories:", expand=True, leading=1
     )
+
+    console.print("\n")
 
     with console.status("Loading...", spinner="material"):
         sleep(2)

@@ -9,7 +9,7 @@ def keyboard_letter_prompt(is_end_game: bool):
 
     prompt_text = Text(
         (
-            "Type an avaliable letter from the keyboard (in white)"
+            "Type an avaliable letter from the keyboard"
             if not is_end_game
             else "Or type 'exit' to exit"
         ),

@@ -1,6 +1,8 @@
 from cli.utils import prompt, console
 
-from core.constants import CATEGORIES_WORDS, CATEGORIES_EMOJIS
+from core.constants import CATEGORIES_WORDS
+
+from cli.constants import CATEGORIES_EMOJIS
 
 
 def category_prompt_view():
