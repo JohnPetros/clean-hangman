@@ -54,8 +54,11 @@ The project is divided into three packages: core, **[CLI](https://www.w3schools.
 - [x] User should be able to reset the running game at any time
 - [x] App should add a limb to Hangman for each incorrect user guess
 - [x] App should display the user's left attempt count
+- [x] App should prevent already used letters
+- [x] App should display what letters are correct and incorrect throughout the game
 - [x] App should display a end game message to user, adapting it based on whether user won or not
 - [x] App should validate any input from user, displaying an error message if any
+- [x] GUI app should listen to keyboard click and press events
 
 ---
 
@@ -124,6 +127,8 @@ $ pip install -r requirements.txt
 $ python3 packages/main.py start
 
 ```
+
+![alt text](image.png)
 
 ---
 
