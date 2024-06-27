@@ -15,7 +15,7 @@ class Letter:
             raise ValueError("Letter value should be a text")
 
         if not self.value.isalpha():
-            raise ValueError("Letter value should be alphabetic")
+            raise ValueError(f"Letter {self.value} value should be alphabetic")
 
         if len(self.value) != 1:
             raise ValueError("Letter value's length should equal to one")

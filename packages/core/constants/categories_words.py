@@ -124,7 +124,7 @@ CATEGORIES_WORDS = categories_tuple(
         "mango",
         "watermelon",
         "peach",
-        "cashew fruit",
+        "cashew",
         "grape",
     ],
     [
