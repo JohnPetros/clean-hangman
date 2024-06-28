@@ -160,6 +160,8 @@ The executable bundle of the app are available to download for:
 
 The GUI web application can be used online by [https://clean-hangman.onrender.com/](https://clean-hangman.onrender.com/) which is hosted by [Render plataform](https://dashboard.render.com/) via Docker container.
 
+---
+
 ## 💪 How to contribute
 
 ```bash
@@ -180,7 +182,7 @@ $ git push origin my-feature
 
 > You should replace 'my-feature' wuth your feature's name that you adding
 
-> You can also open a [new issue](https://github.com/JohnPetros/clean-hangman/issues) reporting some problem, question or sugestion about the project. I will really be glad to help and improve this prject as well 
+> You can also open a [new issue](https://github.com/JohnPetros/clean-hangman/issues) reporting some problem, question or sugestion about the project. I will really be glad to help and improve this project as well 
 
 ---
 
