@@ -1,5 +1,6 @@
-
 services:
   gui:
     build: .
-    command: ["python3", "packages/main.py", "gui"]
+    ports: 
+      - 8000:46857
+    entrypoint: ["python3", "packages/main.py", "gui"]
