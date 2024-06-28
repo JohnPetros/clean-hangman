@@ -64,9 +64,6 @@ jobs:
       - name: Zip file ubuntu
         run: zip -r tradutor_ubuntu.zip dist-ubuntu-*
 
-      - name: Zip file macos
-        run: zip -r tradutor_macos.zip dist-macos-*
-
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
@@ -79,4 +76,3 @@ jobs:
           files: |
             tradutor_windows.zip
             tradutor_ubuntu.zip
-            tradutor_macos.zip
