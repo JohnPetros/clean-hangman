@@ -14,7 +14,6 @@ jobs:
       matrix:
         config:
           - os: ubuntu-22.04
-          - os: macos-latest
           - os: windows-2019
     steps:
       - name: Install tk on ubuntu
