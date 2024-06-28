@@ -45,7 +45,6 @@ class HomeController:
 
     def handle_key_press(self, event: KeyboardEvent):
         letter = event.key
-        print(letter)
         self.__input_letter(letter)
 
     def handle_reset_button_click(self, _):

@@ -9,4 +9,9 @@ def init_app():
     def init_ui(ui: UI):
         init_screens(ui)
 
-    app(target=init_ui, assets_dir=DIRECTORIES.assets, view=AppView.WEB_BROWSER, port=46857)
+    app(
+        target=init_ui,
+        assets_dir=DIRECTORIES.assets,
+        view=AppView.WEB_BROWSER,
+        port=46857,
+    )
