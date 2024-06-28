@@ -117,16 +117,16 @@ cd clean-hangman
 ```bash
 
 # For Linux
-chmod +x start-cli.sh
+chmod +x start-app.sh
 
-./start-cli.sh start # For starting the CLI application
-./start-cli.sh gui # For starting the GUI application
+./start-app.sh start # For starting the CLI application
+./start-app.sh gui # For starting the GUI application
 
 
 # For Windows
-chmod 755 start-cli.bat
-./start-cli.bat start # For starting the CLI application
-./start-cli.sh gui # For starting the GUI application
+chmod 755 start-app.bat
+./start-app.bat start # For starting the CLI application
+./start-app.bat gui # For starting the GUI application
 ```
 
 #### Using Docker 🐳
