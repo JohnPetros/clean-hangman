@@ -1,1 +1,0 @@
-python packages/main.py start
