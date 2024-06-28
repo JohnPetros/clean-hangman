@@ -59,10 +59,10 @@ jobs:
           name: tradutor-pyinstaller-artifact
 
       - name: Zip file windows
-        run: zip -r tradutor_windows.zip dist-windows-*
+        run: zip -r clean_hangman_windows.zip dist-windows-*
 
       - name: Zip file ubuntu
-        run: zip -r tradutor_ubuntu.zip dist-ubuntu-*
+        run: zip -r clean_hangman_ubuntu.zip dist-ubuntu-*
 
       - name: Create Release
         id: create_release
@@ -74,5 +74,5 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            tradutor_windows.zip
-            tradutor_ubuntu.zip
+            clean_hangman_windows.zip
+            clean_hangman_ubuntu.zip
