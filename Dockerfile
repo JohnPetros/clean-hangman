@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 46857
 
-CMD ["python3", "packages/main.py", "start"]
+ENTRYPOINT ["python3", "packages/main.py"]
