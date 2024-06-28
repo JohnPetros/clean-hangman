@@ -1,4 +1,4 @@
-from flet import CrossAxisAlignment
+from flet import CrossAxisAlignment, ScrollMode
 
 from gui.app.types import UI
 from gui.app.components import (
@@ -12,7 +12,8 @@ def home_view(ui: UI):
     ui.title = "Clean Hangman - A John Petros' Game"
     ui.bgcolor = "#34495E"
     ui.horizontal_alignment = CrossAxisAlignment.CENTER
-    ui.window_height = 820
+    ui.scroll
+    ui.scroll = ScrollMode.ALWAYS
 
     home_controller = HomeController(ui)
 
