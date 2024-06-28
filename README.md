@@ -98,45 +98,67 @@ This project was developed using the technologies bellow:
 
 > Also it is good to have a code editor like [VSCode](https://code.visualstudio.com/) if you feel like writing the code base for any reason.
 
-### 🏗️ Setup the application
+### 🏗️ Setup the project
 
 ```bash
 
 # Clone this repository
 git clone https://github.com/JohnPetros/clean-hangman.git
 
-# Access the project folder
+# Access the project directory
 cd clean-hangman
-
-# Create the virtual enviroment
-python3 -m venv .venv
-
-# Activate the virtual enviroment
-source .venv/bin/activate # On Linux
-source .venv\Scripts\activate # On Windows
-
-# Install the dependencies
-pip install -r requirements.txt
 
 ```
 
-### 📟 Running the CLI application
+### 🖥️ Running the application
+
+#### Using script 📟
 
 ```bash
 
-python3 packages/main.py start
+# For Linux
+chmod +x start-cli.sh
+
+./start-cli.sh start # For starting the CLI application
+./start-cli.sh gui # For starting the GUI application
+
+
+# For Windows
+chmod 755 start-cli.bat
+./start-cli.bat start # For starting the CLI application
+./start-cli.sh gui # For starting the GUI application
+```
+
+#### Using Docker 🐳
+
+
+```bash
+
+# CLI app
+docker run --it joaopetros/clean-hangman:2.0 start
+
+# GUI app
+docker run --port 8000:46857 joaopetros/clean-hangman:2.0 gui
 
 ```
+
+> The GUI application will be running on localhost:8000
 
 ---
 
-### 🖥️ Running the GUI application
+## Deploy 🚚 
 
-```bash
 
-python3 packages/main.py gui
+### 📦 Bundle
 
-```
+The executable bundle of the app are available to download for:
+
+- [Linux](https://github.com/JohnPetros/clean-hangman/releases/download/0.0.4/tradutor_ubuntu.zip)
+- [Windows](https://github.com/JohnPetros/clean-hangman/releases/download/0.0.4/tradutor_windows.zip)
+
+### 🖥️ Site
+
+The GUI web application can be used online by [https://clean-hangman.onrender.com/](https://clean-hangman.onrender.com/) which is hosted by [Render plataform](https://dashboard.render.com/) via Docker container.
 
 ## 💪 How to contribute
 
