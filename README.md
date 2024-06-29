@@ -124,13 +124,13 @@ chmod +x start-app.sh
 
 
 # For Windows
-chmod 755 start-app.bat
-./start-app.bat start # For starting the CLI application
-./start-app.bat gui # For starting the GUI application
+icacls start-app.bat /grant Everyone:F
+
+start-app.bat start # For starting the CLI application
+start-app.bat gui # For starting the GUI application
 ```
 
 #### Using Docker 🐳
-
 
 ```bash
 
