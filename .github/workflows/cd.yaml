@@ -64,8 +64,6 @@ jobs:
       - name: Docker build push
         uses: docker/build-push-action@v3.2.0
         with:
-          context: ./packages
-          file: ./Dockerfile
           push: true
           tags: |
             joaopetros/clean-hangman:${{ github.run_number }}
