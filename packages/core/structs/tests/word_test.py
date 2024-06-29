@@ -25,5 +25,5 @@ def describe_word():
     def should_check_if_a_letter_is_included():
         word = Word.create("python")
 
-        assert word.includes_letter(Letter("p"))
-        assert not word.includes_letter(Letter("z"))
+        assert word.includes_letter("p")
+        assert not word.includes_letter("z")

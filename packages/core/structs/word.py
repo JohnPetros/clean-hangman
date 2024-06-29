@@ -11,7 +11,7 @@ class Word:
     def __post_init__(self):
         self.__validate_letters()
 
-    def includes_letter(self, letter: Letter):
+    def includes_letter(self, letter: str):
         for current_letter in self.letters:
             if letter == current_letter.value:
                 return True
