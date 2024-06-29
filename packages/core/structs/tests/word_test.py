@@ -26,4 +26,4 @@ def describe_word():
         word = Word.create("python")
 
         assert word.includes_letter("p")
-        assert not word.includes_letter("z")
+        assert not word.includes_letter("y")
