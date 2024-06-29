@@ -39,14 +39,14 @@ jobs:
       - name: Build with pyinstaller for ${{ matrix.config.os }}
         run: pyinstaller packages/main.py --onefile --noconsole
 
-      - name: Rename built app
-        run: mv./dist./dist-${{ matrix.config.os }}
+      - name: Rename builded app
+        run: mv ./dist ./dist-${{ matrix.config.os }}
 
       - name: Upload result job ${{ matrix.config.os }}
         uses: actions/upload-artifact@v3
         with:
           name: tradutor-pyinstaller-artifact
-          path:./dist*
+          path: ./dist*
 
   image:
     name: Docker Image Deploy
@@ -64,8 +64,8 @@ jobs:
       - name: Docker build push
         uses: docker/build-push-action@v3.2.0
         with:
-          context:./packages
-          file:./Dockerfile
+          context: ./packages
+          file: ./Dockerfile
           push: true
           tags: |
             joaopetros/clean-hangman:${{ github.run_number }}
